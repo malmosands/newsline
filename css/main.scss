@@ -1,0 +1,65 @@
+@import "../www/lib/bootstrap/scss/bootstrap";
+@import "../plugins/fontawesome/css/font-awesome.min.css";
+
+$nav-bg: $brand-inverse;
+
+// General
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  background: lighten($gray-lightest,1);
+}
+
+#sidebar {
+  flex: 0 0 30%;
+  overflow-y: auto;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  .logo {
+    color: #fff;
+  }
+  .list-group {
+    .list-group-item {
+      border: 0;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+      margin: 0;
+      &.list-group-header {
+        background: #6200EA;
+      }
+    }
+  }
+}
+#content {
+  flex: 0 0 70%;
+  padding: 2rem;
+  overflow-y: auto;
+  border-top-right-radius: $border-radius;
+  section {
+    margin-bottom: 2rem;
+  }
+}
+
+// Thumbnail
+
+.thumbnail {
+  background-size: cover;
+  background-position: center;
+	position: relative;
+	width: 100%;		/* desired width */
+  &:before{
+  	content: "";
+  	display: block;
+  	padding-top: 100%; 	/* initial ratio of 1:1*/
+  }
+}
+
+
+// Card
+
+.card {
+  margin-bottom: 1rem;
+}
